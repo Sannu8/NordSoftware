@@ -14,9 +14,9 @@ class App extends Component {
     
     this.state = {
        datas: [
-           {id: 0, text: "Joe Clooney", email: "Joe.Clooney@gmail.com"}, 
-           {id: 1, text: "Sandhya Mahat", email: "sandhya.mahat8@yahoo.com"}, 
-           {id: 2, text: "Kalyan Giri", email: "kalyangiri1@gmail.com"} 
+           {id: 0, text: "Joe Clooney", email: "Joe.Clooney@gmail.com", number: "040178995"}, 
+           {id: 1, text: "Sandhya Mahat", email: "sandhya.mahat8@yahoo.com", number: "0456586995"}, 
+           {id: 2, text: "Kalyan Giri", email: "kalyangiri1@gmail.com", number: "040415684"} 
        ],
         nextID: 3
       

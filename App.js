@@ -3,19 +3,55 @@ import logo from './logo.png';
 import edit from './Edit.png';
 import trash from './Trash.png';
 import './Nord.css';
+import NordInput from './components/NordInput';
+import NordItem from './components/NordItem';
+
 
 class App extends Component {
   
+  constructor(props){
+        super(props);
     
+    this.state = {
+       datas: [
+           {id: 0, text: "Joe Clooney", email: "Joe.Clooney@gmail.com"}, 
+           {id: 1, text: "Sandhya Mahat", email: "sandhya.mahat8@yahoo.com"}, 
+           {id: 2, text: "Kalyan Giri", email: "kalyangiri1@gmail.com"} 
+       ],
+        nextID: 3
+      
+    }
+    
+      this.addData = this.addData.bind(this);
+        this.removeData = this.removeData.bind(this);
+    
+    }
+    
+    addData(dataText)  {
+      let datas = this.state.datas.slice();
+      
+    }
+    
+    removeData(id)  {
+        console.log("Removing: ", id);
+      
+    }
     render() {
     
         
         return (
         <div className="App">
+          <div className = "Nord">
         <header className="Page-header">
           <img src={logo} className="Page-logo" alt="logo" />
           Nord Software
         </header>
+          <NordInput dataText="" addData = {
+        this.addData} />
+            <ul>
+                {this.state.datas.map((data) => { return <NordItem data={data} key={data.id} id={data.id} removeData={this.removeData}/>} )
+                }
+            </ul>
         <p className="Page-content">
           <p className="Page-Title">List of participants</p>
         
@@ -146,6 +182,7 @@ class App extends Component {
             </tr>
         </table>
         </p>
+      </div>
       </div>
         
     );

@@ -1,0 +1,143 @@
+.App {
+  margin: 0px auto 0px auto;
+  width: 976px;
+    
+}
+
+.Nord {
+  padding: 32px;
+  width: 912px;  
+ background-color: #ECF0F1;
+}
+
+.Page-logo {
+  height: 32px;
+  padding-right: 16px;
+}
+
+.Page-header {
+  background-color: #B4BEC7;
+  padding: 32px;
+  color: white;
+  font-size: 24px;
+  width: 976px;
+  
+}
+
+.Page-content {
+
+ width: 912px;
+    
+
+}
+
+.Title {
+    color:  #909090;
+    font-size: 16px;
+}
+
+form {
+  
+    padding-top: 16px;
+    background-color: white;
+    
+}
+
+
+.Row-title {
+  color: #757575;  
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  height: 48px;
+   
+}
+
+.Data-Row {
+  color: #505050;  
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  height: 72px;
+  
+}
+
+
+
+input[type="text"] {
+  
+  
+   height: 40px;
+    font-size: 16px;
+}
+
+.App {
+ margin: 0px auto 0px auto;
+}
+
+input[type="email"] {
+  
+  
+  height: 40px;
+    font-size: 16px;
+}
+
+input[type="tel"] {
+ 
+  
+  height: 40px;
+    font-size: 16px;
+}
+
+.btn  {
+    border: none;
+    background-color: #ECF0F1;
+    font-size: 16px;
+    color: #909090;
+    height: 40px;
+    
+}
+
+.errorText {
+    font-size: 12px;
+    color: red;
+}
+
+table[className="AddNew"] {
+    padding-left: 24px;
+    width: 912px;
+    background-color: white;
+    border-color: 
+    
+}
+
+table[className="FormTable"] {
+   
+    width: 912px;
+    
+}
+
+.edit {
+    fill: #909090;
+    height: 24px;
+    width: 24px;
+}
+
+.trash {
+    fill: #909090;
+    height: 24px;
+    width: 24px;
+}
+
+.AddData {
+    padding-left: 16px;
+}
+
+.ButtonData {
+    
+    padding-left: 16px;
+}
+
+th {
+    text-align: left;
+}

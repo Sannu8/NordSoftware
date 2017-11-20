@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
-import edit from './Edit.png';
-import trash from './Trash.png';
+/*import edit from './Edit.png';
+import trash from './Trash.png';*/
 import './Nord.css';
 import App from './App'
 

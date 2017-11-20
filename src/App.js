@@ -6,7 +6,7 @@ import './Nord.css';
 import Form from "./Form";
 import Table from "./Table";
 
-import NordItem from './components/NordItem';
+//import NordItem from './components/NordItem';
 
 
 class App extends Component {

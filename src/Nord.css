@@ -1,3 +1,5 @@
+/* CSS for App.js */
+
 .App {
   margin: 0px auto 0px auto;
   width: 976px;
@@ -24,6 +26,15 @@
   
 }
 
+
+
+
+
+
+
+/* CSS for Form.js */
+
+
 .Page-content {
 
  width: 912px;
@@ -31,9 +42,9 @@
 
 }
 
-.Title {
+div[className="Title"] {
     color:  #909090;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 form {
@@ -43,27 +54,6 @@ form {
     
 }
 
-
-.Row-title {
-  color: #757575;  
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
-  height: 48px;
-   
-}
-
-.Data-Row {
-  color: #505050;  
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  height: 72px;
-  
-}
-
-
-
 input[type="text"] {
   
   
@@ -71,20 +61,17 @@ input[type="text"] {
     font-size: 16px;
 }
 
-.App {
- margin: 0px auto 0px auto;
-}
 
 input[type="email"] {
   
-  
+  width: 260px;
   height: 40px;
     font-size: 16px;
 }
 
 input[type="tel"] {
  
-  
+  width: 190px;
   height: 40px;
     font-size: 16px;
 }
@@ -117,6 +104,33 @@ table[className="FormTable"] {
     
 }
 
+.success {
+    
+    color: yellowgreen;
+}
+
+/* CSS for Table.js */
+
+.Row-title {
+  color: #757575;  
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  height: 48px;
+   
+}
+
+
+.Data-Row {
+  color: #505050;  
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  height: 72px;
+  
+}
+
+
 .edit {
     fill: #909090;
     height: 24px;
@@ -140,4 +154,20 @@ table[className="FormTable"] {
 
 th {
     text-align: left;
+}
+
+.SaveBtn {
+    background: #07f;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border:none;
+    height: 40px;
+}
+
+.CancelBtn {
+    height: 40px;
+    color: #07f;
+    font-size: 16px;
+    font-weight: 500;
 }

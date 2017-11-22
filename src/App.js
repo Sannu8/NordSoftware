@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+
 import logo from './logo.png';
-/*import edit from './Edit.png';
-import trash from './Trash.png'; */
+
 import './Nord.css';
 import Form from "./Form";
 import Table from "./Table";
 
-//import NordItem from './components/NordItem';
+
+
 
 
 class App extends Component {
@@ -35,9 +36,9 @@ class App extends Component {
            {id: 19, fullName: "Ratna Bahadur Mahat", email: "ratna.mahat111@gmail.com", phone: "0405622271"},
            {id: 20, fullName: "Balsam Almurraghani", email: "balsam.almurraghani@gmail.com", phone: "0405625271"}
         ],
+        editIdx: -1,
         nextID: 21
-    }
-        /*this.removeData = this.removeData.bind(this) */ ;
+    };
 
   
          
@@ -48,14 +49,44 @@ class App extends Component {
       
     }
 
+    handleRemove = (i) => {
+        this.setState(state => ({
+            data: state.data.filter((row, j) => j !== i),
+        }));
+         
+    }
+    
+     startEditing = (i) => {
+        this.setState({editIdx: i});
+         
+    }
+     
+    stopEditing = () => {
+        this.setState({editIdx: -1});
+         
+    }
+
+        handleChange = (e, name, i) => {
+            const {value} = e.target;
+        this.setState(state => ({
+            data: state.data.map(
+                (row, j) => (j === i ? { ...row, [name]: value } : row)
+                )
+        }));
+         
+    };
+
 
 render() {
         return (
+          
            
        <div className = "App">
+            
             <header className="Page-header">
                 <img src={logo} className="Page-logo" alt="logo" />Nord Software
             </header>
+            
              <div className = "Nord">
            
         <Form onSubmit = {submission => this.setState({
@@ -64,10 +95,13 @@ render() {
             
             })
             } />
-        <p>
-            {JSON.stringify(this.state.fields, null, 2)}
-        </p>
+        
             <Table 
+                handleRemove={this.handleRemove} 
+                startEditing={this.startEditing} 
+                editIdx={this.state.editIdx} 
+                handleChange={this.handleChange} 
+                stopEditing={this.stopEditing} 
                     data= {this.state.data}
                     
                     header= {[
@@ -90,7 +124,7 @@ render() {
                             ]} />
             </div>
         </div>
-        
+       
             );
         
     }

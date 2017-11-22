@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
-/*import edit from './Edit.png';
-import trash from './Trash.png';*/
+
 import './Nord.css';
 
 export default class Form extends React.Component {
@@ -36,6 +35,12 @@ export default class Form extends React.Component {
             phoneError: ""
           
        };
+      
+      const message = {
+          successAdd:"Your data has been successfully added!",
+          
+          successEdit: "Your data has successfully been edited."
+      };
        
        if (this.state.fullName.length < 3) {
            isError = true;
@@ -64,8 +69,9 @@ export default class Form extends React.Component {
                })
        }
       
-      else {
+      else { 
             this.setState({
+            successAdd:"Your data has been successfully added!",    
             id: "",
             idError: "",
             fullName: "",
@@ -93,7 +99,8 @@ export default class Form extends React.Component {
        
         if (!err) {
               this.props.onSubmit(this.state);
-        // clearing the form
+       
+            // clearing the form
         this.setState({
             id: "",
             idError: "",
@@ -118,7 +125,13 @@ export default class Form extends React.Component {
         
         return (
             
+            
             <p className="Page-content">
+            <span className="success">
+            
+            {this.state.successAdd}
+            
+            </span>
           <div classname="Title">List of participants</div>
             
             <form>
@@ -130,11 +143,10 @@ export default class Form extends React.Component {
                         placeholder = "Full name" 
                         className= "InputArea" 
                         name="fullName"
-                        //hintText = "Full Name"
-                        //floatingLabelText="Full name"
+                      
                         value= {this.state.fullName} 
                         onChange={e => this.change(e)}
-                        /*floatingLabelFixed */ />
+                        />
                         
                 </td>
                 <td className="AddData">
@@ -143,12 +155,11 @@ export default class Form extends React.Component {
                         placeholder = "E-mail address" 
                         className= "InputArea" 
                         name="email" 
-                        //hintText = "Email"
-                       // floatingLabelText="Email"
+                        
                         value= {this.state.email} 
                         onChange = {e => this.change(e)}
                         errorText={this.state.EmailError}
-                       /* floatingLabelFixed*/ />
+                       />
                 </td>
                 <td className="AddData">
                     <input 
@@ -157,12 +168,11 @@ export default class Form extends React.Component {
                         className= "InputArea" 
                         name="phone" 
                         pattern="^[0-9]{2}[0-9]{8}$"
-                        // hintText = "Phone Number"
-                        //floatingLabelText="Phone Number"
+                  
                         value= {this.state.phone} 
                         onChange = {e => this.change(e) }
                         errorText={this.state.phoneError}
-                       /* floatingLabelFixed */ />
+                        />
                 </td>
                 <td className="ButtonData">
                     <button className = "btn btn-primary" onClick = {e => this.onSubmit(e)}  >Add new</button>
@@ -184,6 +194,7 @@ export default class Form extends React.Component {
     );
   }
 }
+
 
 
 

@@ -5,9 +5,13 @@ import logo from './logo.png';
 import './Nord.css';
 import Form from "./Form";
 import Table from "./Table";
+import orderBy from "lodash/orderBy";
 
 
-
+const invertDirection = {
+  asc: "desc",
+  desc: "asc"
+};
 
 
 class App extends Component {
@@ -37,17 +41,13 @@ class App extends Component {
            {id: 20, fullName: "Balsam Almurraghani", email: "balsam.almurraghani@gmail.com", phone: "0405625271"}
         ],
         editIdx: -1,
-        nextID: 21
+        nextID: 21,
+        columnToSort: "",
+        sortDirection: "desc"
     };
 
   
-         
-    removeData(id)  {
-       this.setState({
-           datas: this.state.datas.filter((data, index) => data.id !== id)
-      })
-      
-    }
+    
 
     handleRemove = (i) => {
         this.setState(state => ({
@@ -62,6 +62,7 @@ class App extends Component {
     }
      
     stopEditing = () => {
+        
         this.setState({editIdx: -1});
          
     }
@@ -74,7 +75,14 @@ class App extends Component {
                 )
         }));
          
-    };
+    }
+        
+     handleSort =(columnName) => {
+         this.setState(state => ({
+             columnToSort: columnName,
+             sortDirection: state.columnToSort === columnName ? invertDirection[state.sortDirection] : 'asc'
+         }));
+     }
 
 
 render() {
@@ -91,26 +99,33 @@ render() {
            
         <Form onSubmit = {submission => this.setState({
             data: [...this.state.data, submission],
-            nextId: ++this.state.nextID
+            //nextId: ++this.state.nextID;
             
             })
             } />
         
             <Table 
+                handleSort={this.handleSort}
                 handleRemove={this.handleRemove} 
                 startEditing={this.startEditing} 
                 editIdx={this.state.editIdx} 
-                handleChange={this.handleChange} 
+                handleChange={this.handleChange}
+               columnToSort={this.state.columnToSort}
+               sortDirection={this.state.sortDirection}
                 stopEditing={this.stopEditing} 
-                    data= {this.state.data}
+                    data= {orderBy(
+                           this.state.data,
+                            this.state.columnToSort,
+                            this.state.sortDirection
+                            )}
                     
-                    header= {[
-                            /* {
+                    header= {[/*
+                             {
                             name: "ID"  ,
                            prop: 'id',
                           },*/
                            {
-                            name: "Name"  ,
+                            name: "Name  "  ,
                            prop: 'fullName',
                           },
                            {

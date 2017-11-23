@@ -30,9 +30,13 @@ Deployment:
 This application has been deployed in heroku. The process to deploy react app in heroku is as follows:
 
 npm install -g create-react-app
+
 create-react-app my-app
+
 cd my-app
+
 git init
+
 
 Open the browser and go to:
 https://devcenter.heroku.com/articles/heroku-cli
@@ -50,9 +54,13 @@ If you've not already logged in, you'll be asked for your login credentials in h
 Then, type:
 
 git add .
+
 git commit -m "react-create-app on Heroku"
+
 git push heroku master
+
 heroku open
+
 
 (The application will now automatically run on a new browser.)
 

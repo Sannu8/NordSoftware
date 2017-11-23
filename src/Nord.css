@@ -45,6 +45,7 @@
 div[className="Title"] {
     color:  #909090;
     font-size: 24px;
+    padding-bottom: 32px;
 }
 
 form {
@@ -82,6 +83,10 @@ input[type="tel"] {
     font-size: 16px;
     color: #909090;
     height: 40px;
+    padding-right: 24px;
+    
+    padding-left: 24px;
+
     
 }
 
@@ -90,15 +95,8 @@ input[type="tel"] {
     color: red;
 }
 
-table[className="AddNew"] {
-    padding-left: 24px;
-    width: 912px;
-    background-color: white;
-    border-color: 
-    
-}
 
-table[className="FormTable"] {
+.FormTable {
    
     width: 912px;
     
@@ -110,6 +108,27 @@ table[className="FormTable"] {
 }
 
 /* CSS for Table.js */
+
+
+table[className="AddNew"] {
+    padding-left: 24px;
+    width: 912px;
+    background-color: white;
+    border-collapse: collapse;
+    
+}
+
+tr {
+     border-bottom: 1px solid #ECF0F1;
+
+}
+
+/*
+td {
+     border: 1px solid black;
+
+}
+*/
 
 .Row-title {
   color: #757575;  
@@ -149,11 +168,21 @@ table[className="FormTable"] {
 
 .ButtonData {
     
-    padding-left: 16px;
+    padding-left: 75px;
+}
+
+.DataEdit {
+     
+    padding-left: 125px;
 }
 
 th {
     text-align: left;
+   
+}
+
+.material {
+    padding: 16px;
 }
 
 .SaveBtn {
@@ -170,4 +199,10 @@ th {
     color: #07f;
     font-size: 16px;
     font-weight: 500;
+}
+
+.titleRow {
+    display: flex;
+    
+    align-items: center;
 }

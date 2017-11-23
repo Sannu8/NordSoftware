@@ -11,8 +11,11 @@ This application was created in Mac Operating System with node version 8.9.1
 In order to create a new application, type the following commands in terminal if you have Node >= 6 on your machine.
 
 npm install -g create-react-app
+
 create-react-app my-app
+
 cd my-app
+
 npm start
 
 You can now run the app you just created on localhost http://localhost:3000/ 

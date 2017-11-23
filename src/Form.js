@@ -140,7 +140,7 @@ export default class Form extends React.Component {
                 <td className="AddData">
                     <input 
                         type = "text" 
-                        placeholder = "Full name" 
+                        placeholder = "   Full name" 
                         className= "InputArea" 
                         name="fullName"
                       
@@ -152,7 +152,7 @@ export default class Form extends React.Component {
                 <td className="AddData">
                     <input 
                         type = "email" 
-                        placeholder = "E-mail address" 
+                        placeholder = "   E-mail address" 
                         className= "InputArea" 
                         name="email" 
                         
@@ -164,7 +164,7 @@ export default class Form extends React.Component {
                 <td className="AddData">
                     <input 
                         type = "tel" 
-                        placeholder = "Phone number" 
+                        placeholder = "   Phone number" 
                         className= "InputArea" 
                         name="phone" 
                         pattern="^[0-9]{2}[0-9]{8}$"
@@ -179,10 +179,10 @@ export default class Form extends React.Component {
                 </td>
             </tr>
                     <tr>
-                        <td><span className="errorText">{this.state.fullNameError}</span></td>
-                        <td><span className="errorText">{this.state.emailError}</span></td>
-                         <td><span className="errorText">{this.state.phoneError}</span></td>
-                         <td></td>
+                        <td className="errortd"><span className="errorText">{this.state.fullNameError}</span></td>
+                        <td className="errortd"><span className="errorText">{this.state.emailError}</span></td>
+                         <td className="errortd"><span className="errorText">{this.state.phoneError}</span></td>
+                         <td className="errortd"></td>
                         </tr>
                         
             </table>
@@ -194,10 +194,6 @@ export default class Form extends React.Component {
     );
   }
 }
-
-
-
-
 
 
 

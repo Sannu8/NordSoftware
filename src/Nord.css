@@ -21,9 +21,7 @@
   background-color: #B4BEC7;
   padding: 32px;
   color: white;
-  font-size: 24px;
-  width: 976px;
-  
+  font-size: 24px; 
 }
 
 
@@ -51,16 +49,19 @@ div[className="Title"] {
 form {
   
     padding-top: 16px;
+   
     background-color: white;
     
 }
 
 input[type="text"] {
   
-  
+  width:99%;
    height: 40px;
     font-size: 16px;
 }
+
+
 
 
 input[type="email"] {
@@ -72,7 +73,7 @@ input[type="email"] {
 
 input[type="tel"] {
  
-  width: 190px;
+  width: 99%;
   height: 40px;
     font-size: 16px;
 }
@@ -93,6 +94,7 @@ input[type="tel"] {
 .errorText {
     font-size: 12px;
     color: red;
+    
 }
 
 
@@ -107,11 +109,15 @@ input[type="tel"] {
     color: yellowgreen;
 }
 
+.errortd {
+    height: 8px;
+}
+
 /* CSS for Table.js */
 
 
 table[className="AddNew"] {
-    padding-left: 24px;
+    
     width: 912px;
     background-color: white;
     border-collapse: collapse;
@@ -126,17 +132,17 @@ tr {
 /*
 td {
      border: 1px solid black;
+    
 
 }
 */
-
 .Row-title {
   color: #757575;  
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   height: 48px;
-   
+  
 }
 
 
@@ -146,6 +152,7 @@ td {
   line-height: 24px;
   font-weight: 400;
   height: 72px;
+   
   
 }
 
@@ -154,12 +161,19 @@ td {
     fill: #909090;
     height: 24px;
     width: 24px;
+    padding-left: 110px;
+    
+}
+
+.removeData {
+   padding-right: 8px;
 }
 
 .trash {
     fill: #909090;
     height: 24px;
     width: 24px;
+   
 }
 
 .AddData {
@@ -171,18 +185,21 @@ td {
     padding-left: 75px;
 }
 
-.DataEdit {
-     
-    padding-left: 125px;
-}
+
 
 th {
     text-align: left;
-   
+    padding-left: 16px;
 }
 
-.material {
-    padding: 16px;
+.materialCancel {
+ padding-left: 50px;
+    
+}
+
+.materialSave {
+ padding-right: 16px;
+    
 }
 
 .SaveBtn {
@@ -192,17 +209,47 @@ th {
     font-weight: 500;
     border:none;
     height: 40px;
+    width: 80px;
 }
 
 .CancelBtn {
+    background: #ECF0F1;
     height: 40px;
     color: #07f;
     font-size: 16px;
     font-weight: 500;
+     border:none;
+     width: 80px;
+     
 }
 
 .titleRow {
     display: flex;
     
     align-items: center;
+}
+
+.Page-header {
+    display:flex;
+    align-items: center;
+    
+}
+
+.Datatd {
+    width: 180px;
+   padding-left: 24px;
+    padding-bottom: 24px;
+     
+}
+
+.EditInput {
+    padding-top: 8px;
+}
+
+.arrow {
+    padding-left: 16px;
+}
+
+.InputAdd {
+    width: 90%;
 }

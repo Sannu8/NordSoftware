@@ -20,7 +20,7 @@ class App extends Component {
     state = {
         data: [
              {id: 1, fullName: "John Doe", email: "joe.clooney@gmail.com", phone: "0405678471"}, 
-           {id: 2, fullName: "Sandhya Mahat", email: "smahat.official@gmail.com", phone: "0404178995"}, 
+           {id: 2, fullName: "Sandhya Mahat", email: "smahato.official@gmail.com", phone: "0404178995"}, 
            {id: 3, fullName: "Kalyan Giri", email: "kalyangiri1@gmail.com", phone: "0456478705"}, 
             {id: 4, fullName: "Rupesh Chaudhary", email: "rupesh.chaudhary@gmail.com", phone: "0405685271"},
            {id: 5, fullName: "Matti Tunturi", email: "mattitunturi1@gmail.com", phone: "0405678478"},
@@ -41,7 +41,7 @@ class App extends Component {
            {id: 20, fullName: "Balsam Almurraghani", email: "balsam.almurraghani@gmail.com", phone: "0405625271"}
         ],
         editIdx: -1,
-        nextID: 21,
+        nextId: 21,
         columnToSort: "",
         sortDirection: "desc"
     };
@@ -70,9 +70,11 @@ class App extends Component {
         handleChange = (e, name, i) => {
             const {value} = e.target;
         this.setState(state => ({
+            id: this.state.nextId,
             data: state.data.map(
-                (row, j) => (j === i ? { ...row, [name]: value } : row)
+                (row, j) => (j === i ? { ...row, [name]: value } : row )
                 )
+          
         }));
          
     }
@@ -98,8 +100,9 @@ render() {
              <div className = "Nord">
            
         <Form onSubmit = {submission => this.setState({
+            
             data: [...this.state.data, submission],
-            //nextId: ++this.state.nextID;
+            nextId: ++this.state.nextId
             
             })
             } />
@@ -118,12 +121,10 @@ render() {
                             this.state.columnToSort,
                             this.state.sortDirection
                             )}
+                    nextId={++this.state.nextId}
                     
-                    header= {[/*
-                             {
-                            name: "ID"  ,
-                           prop: 'id',
-                          },*/
+                    header= {[
+                            
                            {
                             name: "Name  "  ,
                            prop: 'fullName',

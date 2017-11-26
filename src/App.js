@@ -85,6 +85,8 @@ class App extends Component {
              sortDirection: state.columnToSort === columnName ? invertDirection[state.sortDirection] : 'asc'
          }));
      }
+     
+   
 
 
 render() {
@@ -113,6 +115,7 @@ render() {
                 startEditing={this.startEditing} 
                 editIdx={this.state.editIdx} 
                 handleChange={this.handleChange}
+                handleCancel={this.handleCancel}
                columnToSort={this.state.columnToSort}
                sortDirection={this.state.sortDirection}
                 stopEditing={this.stopEditing} 

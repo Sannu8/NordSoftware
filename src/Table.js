@@ -59,7 +59,7 @@ const row = (
             </span>
         )}
        
-        </td><td>
+        </td><td >
        
         {currentlyEditing ? (
          <div className="materialSave">
@@ -127,13 +127,13 @@ export default ({
                 editIdx,
                 nextId,
                 handleChange,
-                
                 stopEditing))}
         </table>
         
       
         
     
+
 
 
 

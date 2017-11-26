@@ -129,13 +129,7 @@ tr {
 
 }
 
-/*
-td {
-     border: 1px solid black;
-    
 
-}
-*/
 .Row-title {
   color: #757575;  
   font-size: 14px;
@@ -167,6 +161,7 @@ td {
 
 .removeData {
    padding-right: 8px;
+    padding-left: 50px;
 }
 
 .trash {
@@ -252,4 +247,8 @@ th {
 
 .InputAdd {
     width: 90%;
+}
+
+.DataEdit {
+    width: 60px;
 }

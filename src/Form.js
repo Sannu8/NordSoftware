@@ -20,7 +20,10 @@ export default class Form extends React.Component {
     
         this.setState({
             [e.target.name]: e.target.value
-        });
+            
+        },
+                     
+                     );
     };
     
   validate = () => {
@@ -194,6 +197,13 @@ export default class Form extends React.Component {
     );
   }
 }
+
+
+
+
+
+
+
 
 
 

@@ -130,17 +130,6 @@ export default ({
                 stopEditing))}
         </table>
         
-      
-        
-    
-
-
-
-
-
-
-
-
 
 
 

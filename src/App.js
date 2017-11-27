@@ -123,7 +123,8 @@ render() {
                            this.state.data,
                             this.state.columnToSort,
                             this.state.sortDirection
-                            )}
+                            )
+                          }
                     nextId={++this.state.nextId}
                     
                     header= {[

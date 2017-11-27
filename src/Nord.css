@@ -94,7 +94,7 @@ input[type="tel"] {
 .errorText {
     font-size: 12px;
     color: red;
-    
+    padding-left: 10px;
 }
 
 

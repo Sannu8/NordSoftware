@@ -31,37 +31,14 @@ Deployment:
 This application has been deployed in heroku. The process to deploy react app in heroku is as follows:
 
 npm install -g create-react-app
-
 create-react-app my-app
-
 cd my-app
-
 git init
-
-
-Open the browser and go to:
-https://devcenter.heroku.com/articles/heroku-cli
-
-Click on MacOS installer.
-
-A package will be downloaded. Open the package and install heroku. Agree to the license Agreement and the installation will be completed. 
-
-In terminal, type the following commands:
-
-heroku create (Application Name: in my case it was nordcontactdetails) -buildpack https://github.com/mars/create-react-app-buildpack.git
-
-If you've not already logged in, you'll be asked for your login credentials in heroku.
-
-Then, type:
-
+heroku create -b https://github.com/mars/create-react-app-buildpack.git
 git add .
-
 git commit -m "react-create-app on Heroku"
-
 git push heroku master
-
 heroku open
-
 
 (The application will now automatically run on a new browser.)
 
